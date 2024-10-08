@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campeonato Atletismo</title>
+</head>
+<body>
+    <h1>Campeonato de Atletismo</h1>
+    <h3>Inscrições</h3>
+    <form>
+        <label for="nomeParticipante">NOME</label>
+        <input type="text" id="nomeParticipante" name="nomeParticipante">
+
+        <label for="idadeParticipante">IDADE</label>
+        <input type="number" id="idadeParticipante" name="idadeParticipante">
+
+        <label for="indicacao">Indicacao</label>
+        <input type="radio" id="Indicacao" name="Indicacao">
+
+        <label for="listaEspera">Lista de Espera</label>
+        <input type="radio" id="ListaEspera" name="ListaEspera">
+
+        <label for="dataIncricao">Data da Inscrição</label>
+        <input type="date" id="dataIncricao" name="dataIncricao">
+
+        <button type="submit">Enviar Inscrição</button>
+    </form>
+    <script>
+        // Variaveis de regras de campeonato
+        const IDADE_MAXIMA = 17;
+        const IDADE_MINIMA = 14;
+        const DATA_MAXIMA_INSCRICAO = 28;
+        // Data do usuario 
+        let nomeParticipante = "Marcelo";
+        let idadeParticipante = "15";
+        let indicacao = true;
+        let listaEspera = false;
+        let dataIncricao = 29;
+        
+
+        if(dataIncricao <=DATA_MAXIMA_INSCRICAO || indicacao) {
+            console.log("1° Validação Concedida!");
+            if(idadeParticipante >=IDADE_MINIMA && idadeParticipante <= IDADE_MAXIMA){
+                console.log("2° Validação concedida!");
+
+                if(!listaEspera){
+                    console.log("3° e ultima vaçidaçao concedida!");
+                    alert(nomeParticipante + "foi aprovado no campeonato!Boa Sorte!");
+                }else
+                    alert("Participante esta na lista de espera! Aguarde!");
+                }
+            }else{
+                    alert("Participante nao atende a regra de idade!");
+                }else{
+                    alert("Inscrição não valida!");
+                }
+            
+        }
+
+    </script>
+    
+</body>
+</html>
