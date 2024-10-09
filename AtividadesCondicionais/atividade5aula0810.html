@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HORAS</title>
+</head>
+<body>
+    <script>
+        let data = new Date();
+        let horaAtual = data.getHours();
+        
+        if(horaAtual>=6&& horaAtual<=12){
+            alert("BOM DIA!");
+
+        } else if (horaAtual>12&&horaAtual<=18){
+
+            alert("BOA TARDE!");
+        } else{
+            alert("BOA NOITE!");
+        }
+
+
+    </script>
+    
+</body>
+</html>
